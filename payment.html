@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Airbnb Clone</title>
+    <link rel="stylesheet" href="payment.css">
+     </head>
+  <body>
+    <header>
+      <!-- Airbnb header section -->
+    </header>
+    <div class="navs">
+    <nav class="navbar">
+      <div class="navbar__container">
+        <a href="index.html"><img src="airbnb.png" width="120px"></img></a>
+        <div class="navbar__menu">
+          <a href="#" class="navbar__menu__item">ANYWHERE</a>
+          <a href="#" class="navbar__menu__item">ANY WEEK</a>
+          <a href="#" class="navbar__menu__item">Airbnb your home</a>
+          <div id="nav-right">
+            <div class="navbar__menu__dropdown">
+              <button onclick="toggleDropDownMenu()" id="navbar__menu__dropbtn" class="navbar__menu__dropbtn">Menu ▾</button>
+              <div id="navbar__menu__dropdown-content" class="navbar__menu__dropdown-content">
+                <a href="#">Host your home</a>
+                <a href="#">Host an experience</a>
+                <a href="#">Help</a>
+                <a href="#">Sign up</a>
+                <a href="#">Log in</a>
+              </div>
+            </div>
+            <button id="signup-btn" class="navbar__menu__button">Sign up</button>
+          </div>
+          <i class="navbar__menu__icon fa fa-bars"></i>
+        </div>
+      </div>
+    </nav>
+    <div class="navbar-narrow">
+      <div class="horizontal-bar">
+        <div class="left-group">
+          <img src="magnif.jpeg" class="icon magnifier"></img>
+          <div class="item">Anytime</div>
+          <div class="item">Any week</div>
+          <div class="item">Add guests</div>
+        </div>
+        <div class="right-group">
+          <img src="filters-icon.jpeg" class="icon filters"></img>
+        </div>
+      </div>
+    </div>
+    </div>
+
+   
+      <div class="parent">
+        <div class="child1">
+            <div class="request-to-book">
+                <h1>Request to book:</h1>
+                <div class="row">
+                  <div class="left">Dates: <span id="booking-dates"></span></div>
+                  <div class="right"><a href="#" id="edit-dates">Edit</a></div>
+                </div>
+                <div class="row">
+                  <div class="left">Guests: <span id="booking-guests"></span></div>
+                  <div class="right"><a href="#" id="edit-guests">Edit</a></div>
+                </div>
+                <hr>
+                <h2>Travel insurance</h2>
+                <div class="row">
+                  <div class="left">
+                    <p>Add travel insurance for $20!<br>Get reimbursed if you need to cancel due to illness, flight delays and more.<br><a href="#">What's covered</a></p>
+                  </div>
+                  <div class="right"><button>Add</button></div>
+                </div>
+                <hr>
+                <form class="payment-form">
+                  <div class="row">
+                    <h2>Credit card payment</h2>
+                  </div>
+                  <div class="row">
+                    <label for="card-holder">Name on card:</label>
+                    <input type="text" id="card-holder" name="card-holder" required>
+                  </div>
+                  <div class="row">
+                    <label for="card-number">Card number:</label>
+                    <input type="text" id="card-number" name="card-number" required>
+                  </div>
+                  <div class="row">
+                    <label for="expiry-date">Expiry date:</label>
+                    <input type="text" id="expiry-date" name="expiry-date" required>
+                  </div>
+                  <div class="row">
+                    <label for="cvv">CVV:</label>
+                    <input type="text" id="cvv" name="cvv" required>
+                  </div>
+                </form>
+                <hr>
+                <div class="row">
+                  <h2>Message the host</h2>
+                </div>
+                <div class="row">
+                  <p>Let the host know why you're travelling and when you'll check in.</p>
+                </div>
+                <div class="row">
+                  <textarea id="message" name="message"></textarea>
+                </div>
+                <hr>
+                <div class="row">
+                  <h2>Cancellation policy</h2>
+                </div>
+                <div class="row">
+                  <p>Free cancellation for 48 hours. Cancel before 29 May for a partial refund. <a href="#">Learn more</a></p>
+                </div>
+                <hr>
+                <div class="row">
+                  <button id="request-to-book" onclick="checkForm()">Request to book</button>
+                </div>
+              </div>
+              
+        </div>
+        <div class="child2">   
+            <div class="frame">
+                <div class="price-info">
+                    <div class="image">
+                      <img src="property.jpeg" alt="Image">
+                    </div>
+                    <div class="title-reviews">
+                      <div class="prop-title">Belsize Cottage</div>
+                      <div class="reviews">*4.82 - 70 reviews</div>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="aircover"><p>Your booking is protected by Aircover</p></div>
+                  <hr>
+               
+                <div class="price-breakdown">
+                  <div class="price-detail">
+                    <div class="label">Number of nights:</div>
+                    <div class="value">3</div>
+                  </div>
+                  <div class="price-detail">
+                    <div class="label">Cleaning fee:</div>
+                    <div id="cleaning-fee" class="value">$10</div>
+                  </div>
+                  <div class="price-detail">
+                    <div class="label">Airbnb service fee:</div>
+                    <div class="value">$12</div>
+                  </div>
+                </div>
+                <hr>
+                <div class="total">
+                  <div class="label">Total:</div>
+                  <div class="value">$280</div>
+                </div>
+              </div>
+        </div>
+      </div>
+    
+      
+      
+
+    <div id="currency-selection" style="display:none">
+      <h3>Choose a currency</h3>
+      <ul>
+        <li id="GBP">Pound sterling - GBP &#8211; £</li>
+        <li>Australian dollar - AUD &#8211; $</li>
+        <li>Brazilian real - BRL &#8211; R$</li>
+        <li>Bulgarian lev - BGN &#8211; лв.</li>
+      </ul>
+    </div>
+    
+    <main>
+
+    </main>
+    <div id="icon-container" class="icon-container">
+      <div class="icon">
+        <img src="house.png" alt="Explore Icon">
+        <p>Explore</p>
+      </div>
+      <div class="icon">
+        <img src="house.png" alt="Wishlist Icon">
+        <p>Wishlist</p>
+      </div>
+      <div class="icon">
+        <img src="house.png" alt="Login Icon">
+        <p>Login</p>
+      </div>
+    </div>
+    
+    <footer class="footer">
+      <div class="links">
+        <a href="#">PrivacyTerms</a>
+        <a href="#">Sitemap</a>
+        <a href="#">UK</a>
+        <a href="#">Modern Slavery Act</a>
+        <a href="#">Company details</a>
+        <a href="#">Destinations</a>
+        <a href="#">© 2023 Airbnb, Inc.</a>
+      </div>
+      <div class="links-right">
+        <a href="#">Choose a language</a>
+        <a href="#" onclick="toggleCurrencySelection()">Choose a currency</a>
+        <a href="#">Support & resources</a>
+      </div>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </footer>
+ 
+    <script src="payment.js"></script>
+      <script src="signup.js"></script>
+      <script src="toggles.js"></script>
+      <div id="overlay"></div>
+
+  </body>
+</html>
