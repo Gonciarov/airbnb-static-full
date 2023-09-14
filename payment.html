@@ -25,17 +25,72 @@
       </div>
       <main class="property-details">
         <div class="content-container">
-            <div class="text-container">
-                <h2>About this listing</h2>
-                <p>Welcome to the Seaside Townhouse – your tranquil retreat just 2 minutes away from the captivating shoreline!</p>
-                <p>Nestled in the heart of a charming coastal paradise, the Seaside Townhouse offers an idyllic escape for up to 4 guests. This thoughtfully designed property is your gateway to the perfect blend of relaxation and adventure, where the rhythm of the waves sets the pace for your getaway.</p>
-                <p>Step inside the tastefully decorated living space, where comfort meets coastal elegance. The open-plan layout seamlessly connects the living, dining, and kitchen areas, creating a sense of togetherness for your group. Sink into plush furnishings as natural light dances through large windows, casting a warm glow on the interior.</p>
-                <p>The fully equipped kitchen invites culinary creativity, boasting modern appliances and ample counter space. Prepare fresh, locally sourced seafood or whip up your favorite breakfast to enjoy at the charming dining nook.</p>
-                <p>As the day winds down, retreat to the cozy bedrooms that promise rejuvenating nights. Crisp linens and comfortable bedding ensure a restful sleep, preparing you for another day of seaside adventures.</p>
-                <p>Wake up to the sound of seagulls and the gentle breeze beckoning you outdoors. The property's prime location means you're only moments away from sinking your toes into soft sands and embracing the soothing embrace of the ocean. Whether you're a sunseeker, a beachcomber, or a water sports enthusiast, this location offers something for everyone.</p>
-                <p>When you're not exploring the coastline, unwind on the private patio with a cup of coffee in hand, or enjoy a BBQ evening with friends and family as you relish the fresh sea air.</p>
-                <p>The Seaside Townhouse is not just a place to stay; it's an experience that captures the essence of coastal living. Book your stay today and create lasting memories in this delightful home away from home. Your seaside adventure awaits!</p>
-            </div>
+            <div class="parent">
+                <div class="child1">
+                    <div class="request-to-book">
+                        <h1>Request to book:</h1>
+                        <div class="row">
+                          <div class="left">Dates: <span id="booking-dates"></span></div>
+                          <div class="right"><a href="#" id="edit-dates">Edit</a></div>
+                        </div>
+                        <div class="row">
+                          <div class="left">Guests: <span id="booking-guests"></span></div>
+                          <div class="right"><a href="#" id="edit-guests">Edit</a></div>
+                        </div>
+                        <hr>
+                        <h2>Travel insurance</h2>
+                        <div class="row">
+                          <div class="left">
+                            <p>Add travel insurance for $20!<br>Get reimbursed if you need to cancel due to illness, flight delays and more.<br><a href="#">What's covered</a></p>
+                          </div>
+                          <div class="right"><button>Add</button></div>
+                        </div>
+                        <hr>
+                        <form class="payment-form">
+                          <div class="row">
+                            <h2>Credit card payment</h2>
+                          </div>
+                          <div class="row">
+                            <label for="card-holder">Name on card:</label>
+                            <input type="text" id="card-holder" name="card-holder" required>
+                          </div>
+                          <div class="row">
+                            <label for="card-number">Card number:</label>
+                            <input type="text" id="card-number" name="card-number" required>
+                          </div>
+                          <div class="row">
+                            <label for="expiry-date">Expiry date:</label>
+                            <input type="text" id="expiry-date" name="expiry-date" required>
+                          </div>
+                          <div class="row">
+                            <label for="cvv">CVV:</label>
+                            <input type="text" id="cvv" name="cvv" required>
+                          </div>
+                        </form>
+                        <hr>
+                        <div class="row">
+                          <h2>Message the host</h2>
+                        </div>
+                        <div class="row">
+                          <p>Let the host know why you're travelling and when you'll check in.</p>
+                        </div>
+                        <div class="row">
+                          <textarea id="message" name="message"></textarea>
+                        </div>
+                        <hr>
+                        <div class="row">
+                          <h2>Cancellation policy</h2>
+                        </div>
+                        <div class="row">
+                          <p>Free cancellation for 48 hours. Cancel before 29 May for a partial refund. <a href="#">Learn more</a></p>
+                        </div>
+                        <hr>
+                        <div class="row">
+                          <a href="./confirm.html"><button id="request-to-book">Request to book</button></a>
+                        </div>
+                      </div>
+                      
+                </div>
             <div class="frame-container">
                
                   <div class="reservation-form">
@@ -53,7 +108,7 @@
                             <option value="3">3 guests</option>
                         </select>
                 
-                        <button type="submit">Reserve</button>
+                        
                     </form>
                 </div>
                 
